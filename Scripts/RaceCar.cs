@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class RaceCar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+     void Update()
     {
+        transform.Rotate(0, 0, 0.1f);   
         
-    }
+        // my successful attempt to move my car using only docs
+        // transform.Translate(0, Time.deltaTime, 0);
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Rotate(0, 0, 0.5f);   
+        // as recommended in the tut
+        transform.Translate(0, 0.01f, 0);
     }
 }
+
