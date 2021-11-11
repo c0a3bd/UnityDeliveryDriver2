@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RaceCar : MonoBehaviour
-{
-    // declare and initialize variables then use the variables below
-    // vs hard coding the values making the script more dynamic
-    
-    float steerSpeed = 0.1f;
-    float moveSpeed = 0.01f;
+{ 
+    // added SerializeField to the variables which allows us to modify these variables
+    // from within Unity's inspector
 
+    [SerializeField] float steerSpeed = 0.1f;
+    [SerializeField] float moveSpeed = 0.01f;
 
      void Update()
     {
