@@ -5,12 +5,17 @@ using UnityEngine;
 public class Collision : MonoBehaviour
 {
 
-    // tut   Using OnCollisionEnter2D() 
-    // ref https://docs.unity3d.com/ScriptReference/Collider.OnCollisionEnter.html
+    // tut   Using OnTriggerEnter2D() 
+    // ref https://docs.unity3d.com/ScriptReference/Collider2D.OnTriggerEnter2D.html
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("successful collision");
+        Debug.Log("Successful collision");
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log("Successful trigger collision");
     }
 
 }
