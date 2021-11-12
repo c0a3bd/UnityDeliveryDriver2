@@ -5,13 +5,13 @@ using UnityEngine;
 public class Delivery : MonoBehaviour
 {
 
-    // tut How To Use Bools  
+    // tut How To Destroy Objects   
     // ref https://docs.unity3d.com/ScriptReference/Collider2D.OnTriggerEnter2D.html
-    // ref https://docs.unity3d.com/ScriptReference/GameObject-tag.html 
-    // ref https://docs.unity3d.com/ScriptReference/Object-operator_Object.html
+    // ref https://docs.unity3d.com/ScriptReference/Object.Destroy.html
 
 
     // set something to check whether it is true or false
+    [SerializeField] float destroyDelay = 0.1f;
     bool hasPackage; 
 
     void OnCollisionEnter2D(Collision2D other)
@@ -22,10 +22,11 @@ public class Delivery : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         // pick up package
-        if (other.tag == "DeliveryPackage")
+        if (other.tag == "DeliveryPackage" && !hasPackage)
         {
             Debug.Log("Successfully picked up package"); 
             hasPackage = true; 
+            Destroy(other.gameObject, destroyDelay); 
         }
         
         // deliver package
