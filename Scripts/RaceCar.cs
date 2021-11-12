@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RaceCar : MonoBehaviour
 { 
-    [SerializeField] float steerSpeed = 250f;
+    [SerializeField] float steerSpeed = 100f;
     [SerializeField] float moveSpeed = 10f;
 
      void Update()
