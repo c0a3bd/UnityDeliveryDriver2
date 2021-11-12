@@ -6,6 +6,7 @@ public class FollowCamera : MonoBehaviour
 {
 
     // Tut Simple Follow Camera 
+    // Ref https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html
 
     [SerializeField] GameObject FollowObject;
 
