@@ -7,7 +7,7 @@ public class RaceCar : MonoBehaviour
     [SerializeField] float steerSpeed = 100f;
     [SerializeField] float moveSpeed = 10f;
 
-     void Update()
+    void Update()
     {
         // tut Using Time.deltaTime() 
         // changed script to add in a generalized Time.deltaTime 
@@ -18,9 +18,8 @@ public class RaceCar : MonoBehaviour
 
         // negative steerAmount to correct direction
         transform.Rotate(0, 0, -steerAmount); 
-
-
         transform.Translate(0, moveAmount, 0);
     }
+
 }
 
