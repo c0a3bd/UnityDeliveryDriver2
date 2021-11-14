@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RaceCar : MonoBehaviour
 { 
-    [SerializeField] float steerSpeed = 100f;
-    [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float steerSpeed = 2f;
+    [SerializeField] float moveSpeed = 2f;
 
     void Update()
     {
@@ -21,5 +21,15 @@ public class RaceCar : MonoBehaviour
         transform.Translate(0, moveAmount, 0);
     }
 
-}
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Successful collision");
+    }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+    
+        moveSpeed = moveSpeed * -1; 
+    }
+
+}

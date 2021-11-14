@@ -13,8 +13,9 @@ public class Delivery : MonoBehaviour
     [SerializeField] Color32 hasPackageColor = new Color32(222, 30, 76, 255);
     [SerializeField] Color32 noPackageColor = new Color32(8, 146, 208, 255);  
 
+
     // set something to check whether it is true or false
-    [SerializeField] float destroyDelay = 0.05f;
+    [SerializeField] float destroyDelay = 0.01f;
     bool hasPackage; 
 
     // variables
@@ -27,7 +28,7 @@ public class Delivery : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Successful collision");
+        // placeholder
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -49,7 +50,7 @@ public class Delivery : MonoBehaviour
             spriteRenderer.color = noPackageColor;
             Destroy(other.gameObject, destroyDelay); 
         }
-
+    
     }
 
 }
